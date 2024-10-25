@@ -24,7 +24,7 @@ export function Workouts() {
               <TabsContent value={treinoKey} key={index} >
 
 
-                <Carousel className="w-full max-w-sm" >
+                <Carousel className="w-full max-w-lg" >
                   <CarouselContent >
                     {exercicio.videoURL.map((url, i) => (
                       <CarouselItem key={i} className="w-full pt-5">
