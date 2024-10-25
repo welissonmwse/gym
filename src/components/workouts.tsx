@@ -27,7 +27,7 @@ export function Workouts() {
                 <Carousel className="w-full max-w-sm" >
                   <CarouselContent >
                     {exercicio.videoURL.map((url, i) => (
-                      <CarouselItem key={i} className="basis-4/5 pt-5">
+                      <CarouselItem key={i} className="w-full pt-5">
                         <iframe
                           className='w-full'
                           src={`https://www.youtube.com/embed/${url}`}
@@ -40,8 +40,13 @@ export function Workouts() {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <CarouselPrevious />
-                  <CarouselNext />
+                  {exercicio.videoURL.length > 1 && (
+                    <>
+                      <CarouselPrevious />
+                      <CarouselNext />
+                    </>
+
+                  )}
                 </Carousel>
               </TabsContent>
             ))}
