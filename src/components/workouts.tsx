@@ -29,7 +29,7 @@ export function Workouts() {
                     {exercicio.videoURL.map((url, i) => (
                       <CarouselItem key={i} className="w-full pt-5">
                         <iframe
-                          className='w-full'
+                          className='w-full min-h-48'
                           src={`https://www.youtube.com/embed/${url}`}
                           title="YouTube video player"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
